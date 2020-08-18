@@ -1,4 +1,4 @@
-module gopylos
+module github.com/eneskarali/gopylos
 
 go 1.14
 
