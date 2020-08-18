@@ -1,4 +1,4 @@
-package gopylos
+package github.com/eneskarali/gopylos
 
 import (
 	"context"
