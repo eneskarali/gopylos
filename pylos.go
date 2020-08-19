@@ -12,21 +12,21 @@ import (
 	"log"
 )
 
-type Pylos struct {
-	SendUsage func(string, string, float32) error
-}
-
 var (
 	Key = ""
 )
+
+type pylos struct {
+	SendUsage func(string, string, float32) error
+}
 
 var (
 	client collector.EventCollectorClient
 )
 
-func Init(host string) (Pylos, error) {
+func Init(host string) (pylos, error) {
 	if len(Key) <= 0 {
-		return Pylos{}, errors.New("access token should be initialized")
+		return pylos{}, errors.New("access token should be initialized")
 	}
 
 	perRPC := oauth.NewOauthAccess(fetchToken(Key))
@@ -37,11 +37,11 @@ func Init(host string) (Pylos, error) {
 	conn, err := grpc.Dial(host, grpc.WithTransportCredentials(credentials.NewTLS(config)), grpc.WithPerRPCCredentials(perRPC))
 	if err != nil {
 		log.Fatalf("connection error: %v", err)
-		return Pylos{}, errors.New("connection error")
+		return pylos{}, errors.New("connection error")
 	}
 	client = collector.NewEventCollectorClient(conn)
 
-	pylos := Pylos{SendUsage: SendUsage}
+	pylos := pylos{SendUsage: SendUsage}
 
 	return pylos, nil
 }
