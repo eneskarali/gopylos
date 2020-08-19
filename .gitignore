@@ -13,3 +13,7 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# file: ~/.gitignore_global
+.DS_Store
+.idea
