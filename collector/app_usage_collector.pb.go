@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.23.0
 // 	protoc        v3.6.1
-// source: event_collector.proto
+// source: app_usage_collector.proto
 
 package collector
 
@@ -42,7 +42,7 @@ type UsageRequest struct {
 func (x *UsageRequest) Reset() {
 	*x = UsageRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_event_collector_proto_msgTypes[0]
+		mi := &file_app_usage_collector_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -55,7 +55,7 @@ func (x *UsageRequest) String() string {
 func (*UsageRequest) ProtoMessage() {}
 
 func (x *UsageRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_event_collector_proto_msgTypes[0]
+	mi := &file_app_usage_collector_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -68,7 +68,7 @@ func (x *UsageRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UsageRequest.ProtoReflect.Descriptor instead.
 func (*UsageRequest) Descriptor() ([]byte, []int) {
-	return file_event_collector_proto_rawDescGZIP(), []int{0}
+	return file_app_usage_collector_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *UsageRequest) GetPlanId() string {
@@ -101,7 +101,7 @@ type UsageResponse struct {
 func (x *UsageResponse) Reset() {
 	*x = UsageResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_event_collector_proto_msgTypes[1]
+		mi := &file_app_usage_collector_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -114,7 +114,7 @@ func (x *UsageResponse) String() string {
 func (*UsageResponse) ProtoMessage() {}
 
 func (x *UsageResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_event_collector_proto_msgTypes[1]
+	mi := &file_app_usage_collector_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -127,50 +127,51 @@ func (x *UsageResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UsageResponse.ProtoReflect.Descriptor instead.
 func (*UsageResponse) Descriptor() ([]byte, []int) {
-	return file_event_collector_proto_rawDescGZIP(), []int{1}
+	return file_app_usage_collector_proto_rawDescGZIP(), []int{1}
 }
 
-var File_event_collector_proto protoreflect.FileDescriptor
+var File_app_usage_collector_proto protoreflect.FileDescriptor
 
-var file_event_collector_proto_rawDesc = []byte{
-	0x0a, 0x15, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x5f, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x6f,
-	0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x09, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74,
-	0x6f, 0x72, 0x22, 0x56, 0x0a, 0x0c, 0x55, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x70, 0x6c, 0x61, 0x6e, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x06, 0x70, 0x6c, 0x61, 0x6e, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x75,
-	0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73,
-	0x65, 0x72, 0x49, 0x64, 0x12, 0x14, 0x0a, 0x05, 0x75, 0x73, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20,
-	0x01, 0x28, 0x02, 0x52, 0x05, 0x75, 0x73, 0x61, 0x67, 0x65, 0x22, 0x0f, 0x0a, 0x0d, 0x55, 0x73,
-	0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x32, 0x52, 0x0a, 0x0e, 0x45,
-	0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x12, 0x40, 0x0a,
-	0x09, 0x53, 0x65, 0x6e, 0x64, 0x55, 0x73, 0x61, 0x67, 0x65, 0x12, 0x17, 0x2e, 0x63, 0x6f, 0x6c,
-	0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x2e, 0x55, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x18, 0x2e, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x2e,
-	0x55, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42,
-	0x15, 0x5a, 0x13, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x3b, 0x63, 0x6f, 0x6c,
-	0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_app_usage_collector_proto_rawDesc = []byte{
+	0x0a, 0x19, 0x61, 0x70, 0x70, 0x5f, 0x75, 0x73, 0x61, 0x67, 0x65, 0x5f, 0x63, 0x6f, 0x6c, 0x6c,
+	0x65, 0x63, 0x74, 0x6f, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x09, 0x63, 0x6f, 0x6c,
+	0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x22, 0x56, 0x0a, 0x0c, 0x55, 0x73, 0x61, 0x67, 0x65, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x70, 0x6c, 0x61, 0x6e, 0x5f, 0x69,
+	0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x70, 0x6c, 0x61, 0x6e, 0x49, 0x64, 0x12,
+	0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x14, 0x0a, 0x05, 0x75, 0x73, 0x61, 0x67,
+	0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x02, 0x52, 0x05, 0x75, 0x73, 0x61, 0x67, 0x65, 0x22, 0x0f,
+	0x0a, 0x0d, 0x55, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x32,
+	0x55, 0x0a, 0x11, 0x41, 0x70, 0x70, 0x55, 0x73, 0x61, 0x67, 0x65, 0x43, 0x6f, 0x6c, 0x6c, 0x65,
+	0x63, 0x74, 0x6f, 0x72, 0x12, 0x40, 0x0a, 0x09, 0x53, 0x65, 0x6e, 0x64, 0x55, 0x73, 0x61, 0x67,
+	0x65, 0x12, 0x17, 0x2e, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x2e, 0x55, 0x73,
+	0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x18, 0x2e, 0x63, 0x6f, 0x6c,
+	0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x2e, 0x55, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x15, 0x5a, 0x13, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63,
+	0x74, 0x6f, 0x72, 0x3b, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_event_collector_proto_rawDescOnce sync.Once
-	file_event_collector_proto_rawDescData = file_event_collector_proto_rawDesc
+	file_app_usage_collector_proto_rawDescOnce sync.Once
+	file_app_usage_collector_proto_rawDescData = file_app_usage_collector_proto_rawDesc
 )
 
-func file_event_collector_proto_rawDescGZIP() []byte {
-	file_event_collector_proto_rawDescOnce.Do(func() {
-		file_event_collector_proto_rawDescData = protoimpl.X.CompressGZIP(file_event_collector_proto_rawDescData)
+func file_app_usage_collector_proto_rawDescGZIP() []byte {
+	file_app_usage_collector_proto_rawDescOnce.Do(func() {
+		file_app_usage_collector_proto_rawDescData = protoimpl.X.CompressGZIP(file_app_usage_collector_proto_rawDescData)
 	})
-	return file_event_collector_proto_rawDescData
+	return file_app_usage_collector_proto_rawDescData
 }
 
-var file_event_collector_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_event_collector_proto_goTypes = []interface{}{
+var file_app_usage_collector_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_app_usage_collector_proto_goTypes = []interface{}{
 	(*UsageRequest)(nil),  // 0: collector.UsageRequest
 	(*UsageResponse)(nil), // 1: collector.UsageResponse
 }
-var file_event_collector_proto_depIdxs = []int32{
-	0, // 0: collector.EventCollector.SendUsage:input_type -> collector.UsageRequest
-	1, // 1: collector.EventCollector.SendUsage:output_type -> collector.UsageResponse
+var file_app_usage_collector_proto_depIdxs = []int32{
+	0, // 0: collector.AppUsageCollector.SendUsage:input_type -> collector.UsageRequest
+	1, // 1: collector.AppUsageCollector.SendUsage:output_type -> collector.UsageResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -178,13 +179,13 @@ var file_event_collector_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_event_collector_proto_init() }
-func file_event_collector_proto_init() {
-	if File_event_collector_proto != nil {
+func init() { file_app_usage_collector_proto_init() }
+func file_app_usage_collector_proto_init() {
+	if File_app_usage_collector_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_event_collector_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_app_usage_collector_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UsageRequest); i {
 			case 0:
 				return &v.state
@@ -196,7 +197,7 @@ func file_event_collector_proto_init() {
 				return nil
 			}
 		}
-		file_event_collector_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_app_usage_collector_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UsageResponse); i {
 			case 0:
 				return &v.state
@@ -213,20 +214,20 @@ func file_event_collector_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_event_collector_proto_rawDesc,
+			RawDescriptor: file_app_usage_collector_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_event_collector_proto_goTypes,
-		DependencyIndexes: file_event_collector_proto_depIdxs,
-		MessageInfos:      file_event_collector_proto_msgTypes,
+		GoTypes:           file_app_usage_collector_proto_goTypes,
+		DependencyIndexes: file_app_usage_collector_proto_depIdxs,
+		MessageInfos:      file_app_usage_collector_proto_msgTypes,
 	}.Build()
-	File_event_collector_proto = out.File
-	file_event_collector_proto_rawDesc = nil
-	file_event_collector_proto_goTypes = nil
-	file_event_collector_proto_depIdxs = nil
+	File_app_usage_collector_proto = out.File
+	file_app_usage_collector_proto_rawDesc = nil
+	file_app_usage_collector_proto_goTypes = nil
+	file_app_usage_collector_proto_depIdxs = nil
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -237,74 +238,74 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// EventCollectorClient is the client API for EventCollector service.
+// AppUsageCollectorClient is the client API for AppUsageCollector service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type EventCollectorClient interface {
+type AppUsageCollectorClient interface {
 	SendUsage(ctx context.Context, in *UsageRequest, opts ...grpc.CallOption) (*UsageResponse, error)
 }
 
-type eventCollectorClient struct {
+type appUsageCollectorClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewEventCollectorClient(cc grpc.ClientConnInterface) EventCollectorClient {
-	return &eventCollectorClient{cc}
+func NewAppUsageCollectorClient(cc grpc.ClientConnInterface) AppUsageCollectorClient {
+	return &appUsageCollectorClient{cc}
 }
 
-func (c *eventCollectorClient) SendUsage(ctx context.Context, in *UsageRequest, opts ...grpc.CallOption) (*UsageResponse, error) {
+func (c *appUsageCollectorClient) SendUsage(ctx context.Context, in *UsageRequest, opts ...grpc.CallOption) (*UsageResponse, error) {
 	out := new(UsageResponse)
-	err := c.cc.Invoke(ctx, "/collector.EventCollector/SendUsage", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/collector.AppUsageCollector/SendUsage", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// EventCollectorServer is the server API for EventCollector service.
-type EventCollectorServer interface {
+// AppUsageCollectorServer is the server API for AppUsageCollector service.
+type AppUsageCollectorServer interface {
 	SendUsage(context.Context, *UsageRequest) (*UsageResponse, error)
 }
 
-// UnimplementedEventCollectorServer can be embedded to have forward compatible implementations.
-type UnimplementedEventCollectorServer struct {
+// UnimplementedAppUsageCollectorServer can be embedded to have forward compatible implementations.
+type UnimplementedAppUsageCollectorServer struct {
 }
 
-func (*UnimplementedEventCollectorServer) SendUsage(context.Context, *UsageRequest) (*UsageResponse, error) {
+func (*UnimplementedAppUsageCollectorServer) SendUsage(context.Context, *UsageRequest) (*UsageResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SendUsage not implemented")
 }
 
-func RegisterEventCollectorServer(s *grpc.Server, srv EventCollectorServer) {
-	s.RegisterService(&_EventCollector_serviceDesc, srv)
+func RegisterAppUsageCollectorServer(s *grpc.Server, srv AppUsageCollectorServer) {
+	s.RegisterService(&_AppUsageCollector_serviceDesc, srv)
 }
 
-func _EventCollector_SendUsage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AppUsageCollector_SendUsage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UsageRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(EventCollectorServer).SendUsage(ctx, in)
+		return srv.(AppUsageCollectorServer).SendUsage(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/collector.EventCollector/SendUsage",
+		FullMethod: "/collector.AppUsageCollector/SendUsage",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(EventCollectorServer).SendUsage(ctx, req.(*UsageRequest))
+		return srv.(AppUsageCollectorServer).SendUsage(ctx, req.(*UsageRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _EventCollector_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "collector.EventCollector",
-	HandlerType: (*EventCollectorServer)(nil),
+var _AppUsageCollector_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "collector.AppUsageCollector",
+	HandlerType: (*AppUsageCollectorServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "SendUsage",
-			Handler:    _EventCollector_SendUsage_Handler,
+			Handler:    _AppUsageCollector_SendUsage_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "event_collector.proto",
+	Metadata: "app_usage_collector.proto",
 }
