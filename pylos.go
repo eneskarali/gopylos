@@ -21,7 +21,7 @@ type pylos struct {
 }
 
 var (
-	client collector.EventCollectorClient
+	client collector.AppUsageCollectorClient
 )
 
 func Init(host string) (pylos, error) {
@@ -39,7 +39,7 @@ func Init(host string) (pylos, error) {
 		log.Fatalf("connection error: %v", err)
 		return pylos{}, errors.New("connection error")
 	}
-	client = collector.NewEventCollectorClient(conn)
+	client = collector.NewAppUsageCollectorClient(conn)
 
 	pylos := pylos{SendUsage: SendUsage}
 
